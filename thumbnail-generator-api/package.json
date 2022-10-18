@@ -2,11 +2,23 @@
   "name": "thumbnail-generator-api",
   "description": "This template demonstrates how to make a simple HTTP API with Node.js and Typescript running on AWS Lambda and API Gateway using the Serverless Framework v3",
   "version": "1.0.0",
+  "scripts": {
+    "test:unit": "jest --testPathPattern=test/unit",
+    "test:unit:watch": "jest --watchAll --testPathPattern=test/unit",
+    "test:functional": "jest --testPathPattern=test/functional",
+    "test:cov": "jest --coverage --testPathPattern=test/unit",
+    "lint": "eslint ./src ./test --no-fix",
+    "lint:fix": "eslint ./src ./test --fix",
+    "format": "prettier --check \"src/**/*.js\" \"test/**/*.js\"",
+    "format:fix": "prettier --write \"src/**/*.js\" \"test/**/*.js\""
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.101",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.7.1",
     "serverless": "^3.21.0",
     "serverless-offline": "^9.1.6",
     "serverless-plugin-typescript": "^2.1.2",
