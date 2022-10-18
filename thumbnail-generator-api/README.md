@@ -1,40 +1,45 @@
-# Code Challenge: Thumbnail Generator API
+<!--
+title: 'AWS Simple HTTP Endpoint example in NodeJS with Typescript'
+description: 'This template demonstrates how to make a simple HTTP API with Node.js and Typescript running on AWS Lambda and API Gateway using the Serverless Framework v3.'
+layout: Doc
+framework: v3
+platform: AWS
+language: nodeJS
+authorLink: 'https://github.com/serverless'
+authorName: 'Serverless, inc.'
+authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
+-->
 
-## Goal
-Build a simple API that generates thumbnails from a source image
+# Serverless Framework Node with Typescript HTTP API on AWS
 
-## Requirements
-- The API should provide at least 1 endpoint where the user will be able to POST the original image
-- The API must **ONLY** accept PNG and JPEG files
-- The API must reject input file bigger than **11mb**
-- The API should give the user 3 new images with the following dimensions
-  - 400x300
-  - 160x120
-  - 120x120
+This template demonstrates how to make a simple HTTP API with Node.js and Typescript running on AWS Lambda and API Gateway using the Serverless Framework v3.
 
-## Grading Guidelines
+This template does not include any kind of persistence (database). For more advanced examples, check out the [serverless/examples repository](https://github.com/serverless/examples) which includes Typescript, Mongo, DynamoDB and other examples.
 
-### MVP (40 points)
-- Every requirement is met
-- The solution runs on our enviroment
-- Tech Stack: **Node.js v16** (or highest) using **Typescript**
-- Any ENV specific value should be configurable and documented
-- Everything should work after following a simple README
-- The code should be clear and easy to read / debug
+## Setup
 
-### Nice moves (5 points each)
-- It includes an **Architecture Diagram** to present your solution
-- It includes **Swagger** or **Postman** documentation 
-- It includes configuration files / scripts for deploying it on **AWS**
-- It's serverless! (either **AWS Lambda + API Gateway** + **Dynamodb**)
-- It relies on **CDK v2** or **Serverless Framework** (Infrastructure as Code)
-- It's Dockerized for local development / testing
-- It leverages cloud services (ie: AWS Cognito, Lambda, API Gateway, EventBridge, S3, SNS, SQS, etc...)
-- It's asynchronic
-- It's fast (<~500ms after upload finishes)
-- It includes some kind of testing (unit tests, integration tests, etc) with at least 70% coverage
-- It has an auth implementation (recommended: AWS Cognito or Auth0)
+Run this command to initialize a new project in a new working directory.
 
-### Wait, WHAT?! (10 points each)
-- It includes a configuration file / script to setup a CI/CD process on AWS
-- It includes three different kinds of tests (unit, integration and performance)
+```
+npm install
+```
+
+## Usage
+
+**Deploy**
+
+```
+$ serverless deploy
+```
+
+**Invoke the function locally.**
+
+```
+serverless invoke local --function hello
+```
+
+**Invoke the function**
+
+```
+curl https://xxxxxxxxx.execute-api.us-east-1.amazonaws.com/
+```
